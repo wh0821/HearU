@@ -65,10 +65,10 @@ We can also miniaturize the hardware immensely by using more custom built electr
 
 We would work on Integrating a camera to track users’ hands so that we can convert sign language into speech, so that those with hearing impairments can easily communicate with others, even if they don’t know sign language.
 
+![Future Steps](https://github.com/Boheng2/HearU/blob/main/HearUFutureSteps.png)
 
 
 
-
-Elevator pitch
+#Elevator pitch
 
 HearU is a device that gives subtitles to the world. It allows those with hearing disabilities to break through all communication hurdles they face and be able to achieve more with ease. 
