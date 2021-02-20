@@ -67,7 +67,7 @@ class Retreiver(QObject):
             frames_per_buffer=1600)
 
         stream.start_stream()
-        startTime = time.time()
+        startTime = 0
 
         while True:
 
@@ -76,10 +76,10 @@ class Retreiver(QObject):
                 ALLOWEDRECORD = True
             else:
                 ALLOWEDRECORD = False
-            if (decibels > DECIBELLIMIT and startTime - time.time() > 5):
+            if (decibels > DECIBELLIMIT and round(time.time() - startTime) > 5):
                 self.overLimit.emit()
                 startTime = time.time()
-            self.newData.emit(decibels)
+            self.newData.emit(round(decibels))
             time.sleep(0.1)
 
     
@@ -184,8 +184,8 @@ class Window(QWidget):
         self.label_3.hide()
 
         self.graphWidget = pg.PlotWidget()
-        self.graphWidget.setLabel("left", "Decibels(dB)",)
-        self.graphWidget.setLabel("bottom", "Seconds(s)",)
+        self.graphWidget.setLabel("left", "Decibels(dB)",).setFont(8)
+        self.graphWidget.setLabel("bottom", "Seconds(s)",).setFont(8)
         layout = QVBoxLayout()
         layout.addWidget(self.graphWidget)
         self.groupBox_3.setLayout(layout)
@@ -269,8 +269,6 @@ class Window(QWidget):
         MOTOR.ChangeDutyCycle(100)
         time.sleep(1)
         MOTOR.ChangeDutyCycle(0)
-
-
 
     def graphicCb(self, de):
 
