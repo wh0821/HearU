@@ -1,7 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from PyQt5.QtGui import QMovie
 import time
-# import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 from WarningD import WarningD
 import qtmodern.styles
 import qtmodern.windows
