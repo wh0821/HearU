@@ -1,5 +1,5 @@
 # HearU
-[link](https://github.com/Boheng2/HearU/blob/main/HearU-logo.png)
+![HearU](https://github.com/Boheng2/HearU/blob/main/HearU-logo.png)
 
 ## Inspiration
 Speech is one of the fundamental ways for us to communicate with each other, but many are left out of this channel of communication. Around half a billion people around the world suffer from hearing loss, this is something we wanted to address and help remedy.  
