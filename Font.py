@@ -4,6 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Font(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
+        Dialog.setWindowTitle("Font Options")
         Dialog.resize(353, 89)
         self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
         self.buttonBox.setGeometry(QtCore.QRect(240, 20, 80, 51))
