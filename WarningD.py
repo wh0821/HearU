@@ -24,5 +24,5 @@ class WarningD(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        Dialog.setWindowTitle(_translate("Dialog", "Warning"))
         self.label.setText(_translate("Dialog", "A source of loud noise detected!"))

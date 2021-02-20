@@ -1,7 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from PyQt5.QtGui import QMovie
 import time
-import RPi.GPIO as GPIO
+# import RPi.GPIO as GPIO
 from WarningD import WarningD
 import qtmodern.styles
 import qtmodern.windows
@@ -184,8 +184,8 @@ class Window(QWidget):
         self.label_3.hide()
 
         self.graphWidget = pg.PlotWidget()
-        self.graphWidget.setLabel("left", "Decibels(dB)",).setFont(8)
-        self.graphWidget.setLabel("bottom", "Seconds(s)",).setFont(8)
+        self.graphWidget.setLabel("left", "<span style=\"font-size:8px\">Decibels(dB)</span>")
+        self.graphWidget.setLabel("bottom", "<span style=\"font-size:8px\">Seconds(s)</span>")
         layout = QVBoxLayout()
         layout.addWidget(self.graphWidget)
         self.groupBox_3.setLayout(layout)

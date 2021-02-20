@@ -14,7 +14,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Privacy(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.setWindowTitle("Listening Options")
         Dialog.resize(424, 105)
         self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
         self.buttonBox.setGeometry(QtCore.QRect(320, 30, 80, 51))
@@ -40,6 +39,6 @@ class Privacy(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        Dialog.setWindowTitle(_translate("Dialog", "Listening Options"))
         self.label_2.setText(_translate("Dialog", "Start Listening At (dB):"))
         self.label_3.setText(_translate("Dialog", "Set Decibel Limit"))
