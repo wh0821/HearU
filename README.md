@@ -8,13 +8,7 @@ Without the ability to hear, many are locked out of professional opportunities t
 
 Our aim is to make this an issue of the past and allow those living with hearing loss to be able to do everything they wish to do easily. 
 HearU is the first step in achieving this dream.
-![Speech is one of the fundamental ways for us to communicate with each other, but many are left out of this channel of communication. Around half a billion people around the world suffer from hearing loss, this is something we wanted to address and help remedy.  
-
-Without the ability to hear, many are locked out of professional opportunities to advance their careers especially for jobs requiring leadership and teamwork.  Even worse, many have trouble creating fulfilling relationships with others due to this communication hurdle. 
-
-Our aim is to make this an issue of the past and allow those living with hearing loss to be able to do everything they wish to do easily. 
-HearU is the first step in achieving this dream.
-](https://github.com/Boheng2/HearU/blob/main/HearUWhyItMatters.png)
+![Speech is one of the fundamental ways for us to communicate with each other, but many are left out of this channel of communication. Around half a billion people around the world suffer from hearing loss, this is something we wanted to address and help remedy. Without the ability to hear, many are locked out of professional opportunities to advance their careers especially for jobs requiring leadership and teamwork.  Even worse, many have trouble creating fulfilling relationships with others due to this communication hurdle. Our aim is to make this an issue of the past and allow those living with hearing loss to be able to do everything they wish to do easily. HearU is the first step in achieving this dream.](https://github.com/Boheng2/HearU/blob/main/HearUWhyItMatters.png)
 
 ## What it does
 
