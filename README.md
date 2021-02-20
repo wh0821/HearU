@@ -69,6 +69,6 @@ We would work on Integrating a camera to track users’ hands so that we can con
 
 
 
-#Elevator pitch
+# Elevator pitch
 
 HearU is a device that gives subtitles to the world. It allows those with hearing disabilities to break through all communication hurdles they face and be able to achieve more with ease. 
