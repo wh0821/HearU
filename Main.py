@@ -45,7 +45,7 @@ def get_current_time():
 def getDecibel(stream):
     data = stream.read(1600)
     rms = audioop.rms(data, 2)
-    decibel = 20 * math.log10(rms)
+    decibel = 20 * math.log10(rms+1)
     return decibel
 
 class Retreiver(QObject):
