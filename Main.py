@@ -39,7 +39,7 @@ MOTOR = GPIO.PWM(MOTORPIN, Hz)
 MOTOR.start(0)
 
 def writeFile(text):
-    text_file = open("transcript.txt", "w")
+    text_file = open("transcript.txt", "a")
     text_file.write(text)
     text_file.close()
 
@@ -150,6 +150,7 @@ class Listener(QObject):
                             currentText = " "
                             lines = 0
                         currentText += transcript + "\n"
+                        totalText+= transcript
                         lines+=1
                         
                         self.textHere.emit(currentText)
