@@ -38,6 +38,11 @@ GPIO.setup(MOTORPIN, GPIO.OUT)
 MOTOR = GPIO.PWM(MOTORPIN, Hz)
 MOTOR.start(0)
 
+def writeFile(text):
+    text_file = open("transcript.txt", "w")
+    text_file.write(text)
+    text_file.close()
+
 def get_current_time():
 
     return int(round(time.time() * 1000))
@@ -62,6 +67,7 @@ class Retreiver(QObject):
             frames_per_buffer=1600)
 
         stream.start_stream()
+        startTime = time.time()
 
         while True:
 
@@ -70,8 +76,9 @@ class Retreiver(QObject):
                 ALLOWEDRECORD = True
             else:
                 ALLOWEDRECORD = False
-            if (decibels > DECIBELLIMIT):
+            if (decibels > DECIBELLIMIT and startTime - time.time() > 5):
                 self.overLimit.emit()
+                startTime = time.time()
             self.newData.emit(decibels)
             time.sleep(0.1)
 
@@ -101,6 +108,7 @@ class Listener(QObject):
         mic_manager = ResumableMicrophoneStream(16000, int(16000 / 10))
 
         currentText = ""
+        totalText = ""
         lines = 0
 
         with mic_manager as stream:
@@ -119,6 +127,7 @@ class Listener(QObject):
                 for response in responses:
 
                     if (self.stop == True):
+                        writeFile(totalText)
                         stream.closed = True
                         break
 
@@ -250,11 +259,11 @@ class Window(QWidget):
         self.thread.start()
 
     def openWarning(self):
+        self.motorCb()
         dialog = QtWidgets.QDialog()
         ui = WarningD()
         ui.setupUi(dialog)
         dialog.exec_()
-        self.motorCb()
 
     def motorCb(self):
         MOTOR.ChangeDutyCycle(100)
