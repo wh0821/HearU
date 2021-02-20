@@ -137,9 +137,11 @@ class Listener(QObject):
                     transcript = result.alternatives[0].transcript
 
                     if result.is_final and ALLOWEDRECORD:
-                        if (lines == 7):
+                        if (lines == 8):
                             currentText = " "
+                            lines = 0
                         currentText += transcript + "\n"
+                        lines+=1
                         
                         self.textHere.emit(currentText)
 
@@ -252,7 +254,7 @@ class Window(QWidget):
         ui = WarningD()
         ui.setupUi(dialog)
         dialog.exec_()
-        motorCb()
+        self.motorCb()
 
     def motorCb(self):
         MOTOR.ChangeDutyCycle(100)
